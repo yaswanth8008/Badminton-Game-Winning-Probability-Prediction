@@ -2,7 +2,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-app = Flask('game_winning_probability')
+app = Flask(__name__, template_folder='Templates') 
 model = pickle.load(open('RandomForest_model.pkl', 'rb'))
 
 
